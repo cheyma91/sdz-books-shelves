@@ -1,0 +1,16 @@
+<ul class="list-unstyled">
+  <li *ngFor="let book of books; index as bookIndex" class="media mb-2 align-items-stretch">
+    <img [src]="book.photo" class="align-self-start mr-3" style="max-width:15%" alt="...">
+    <div class="media-body border-right border-danger">
+      <h5 class="mt-0 mb-1">{{book.title}}</h5>
+      <small class="text-muted"><b>{{book.author}}</b></small>
+      <p class="mb-1">
+        {{book.synopsis}}...
+        <a style="color: coral;" [routerLink]="['/books/view/', bookIndex]">Learn more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+      </p>
+    </div>
+    <div style="font-size: larger; color: brown;" >
+      <a (click)="onDelete(book)" class="ml-1"> <i class="fa fa-window-close" aria-hidden="true"></i> </a>
+    </div>
+  </li>
+</ul>

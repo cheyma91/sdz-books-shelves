@@ -1,0 +1,20 @@
+
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="navLink" [routerLink]="['/books/edit/',bookIndex]"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </a>
+  </li>
+  <li class="nav-item ml-3">
+    <a class="navLink" (click)="onDelete(book)"> <i class="fa fa-window-close" aria-hidden="true"></i> Delete</a>
+  </li>
+</ul>
+<div *ngIf="msg" class="alert alert-danger"> {{msg}}</div>
+<div class="media mt-1">
+  <img [src]="book.photo" class="align-self-start mr-3" style="max-width:30%" alt="book.photo">
+  <div class="media-body">
+    <h5 class="mt-0 mb-1">{{book.title}}</h5>
+    <small class="text-muted"><b>{{book.author}}</b></small>
+    <p class="mb-1">
+      {{book.synopsis}}
+    </p>
+  </div>
+</div>

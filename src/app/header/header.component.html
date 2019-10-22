@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand"> <i class="fa fa-book"></i>  Books Shelves</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul *ngIf="isAuth" class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/books">Books</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/books/new">Add Book</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li *ngIf="!isAuth" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="!isAuth" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLinkActive="active" routerLink="/register">Register</a>
+      </li>
+      <li *ngIf="isAuth" class="nav-item mr-2">
+        <a class="nav-link" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
