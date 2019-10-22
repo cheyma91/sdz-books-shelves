@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Firebase config object
 
 To initialize Firebase in your app, you need to provide your app's Firebase project configuration.
-in app.component.ts edit the firebase config obj [firebase-doc] (https://firebase.google.com/docs/web/setup?authuser=0#config-object).
+in app.component.ts edit the firebase config obj [firebase-doc](https://firebase.google.com/docs/web/setup?authuser=0#config-object).
 
 ## Development server
 
